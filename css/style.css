@@ -1,0 +1,359 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{
+  font-family: "roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(+100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+body{
+  width: 100%;
+  overflow-x: hidden;
+  margin:0;
+  padding:0;
+  opacity: 0.4;
+  font-size: 1.6rem;
+}
+
+header{
+  height:50px;
+  font-size: 1.6rem;
+}
+
+header nav > *{
+  float:left;
+  padding-top: 20px;
+  font-weight: bold;
+  animation: 1.5s ease-out 0s 1 slideInFromRight;
+}
+
+header nav img{
+  padding-left: 5px;
+  padding-top: 5px;
+  height: 45px;
+  width: 150px;
+}
+
+header nav ul{
+  width:50%;
+  margin: 0 15%;
+}
+
+header nav li{
+  float:left;
+  width:12.5%;
+  list-style: none;
+  text-align: center;
+}
+
+nav > a{
+  margin-left:5%;
+}
+
+main{
+  background: url(../assets/Main.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+main .slide{
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
+}
+
+main a{
+  color: aliceblue;
+}
+
+main > section{
+  width:40%;
+  margin: 0 40% 150px 10%;
+  color: aliceblue;
+  font-size: 2.5rem;
+}
+
+.black{
+  background: rgb(31, 31, 33);
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+  border-radius: 25px;
+  width:250px;
+  height:250px;
+  padding: 30px;
+}
+
+.black *{
+  margin:auto;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  font-size: 1.5rem;
+}
+
+.three{
+  width: 100%;
+  padding-top: 200px;
+  margin: 0 20%;
+  color: black;
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
+}
+
+.three section{
+  float:left;
+  width:20%;
+  padding-top: 100px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.three section img{
+  height: 30px;
+  Width: 30px;
+}
+
+.two section{
+  height: 400px;
+  width:50%;
+  float:left;
+  background: rgb(187, 187, 187);
+  padding: 50px 2% 30px 20%;
+}
+
+.two .twocat{
+  padding: 50px 20% 30px 2%;
+}
+
+.twocat div{
+  border-radius: 25px;
+}
+
+.two .twocat img{
+  height: 300px;
+  width: 400px;
+  border-radius: 5%;
+  animation: 1.5s ease-out 0s 1 slideInFromRight;
+}
+
+.artists{
+  margin: 0 20%;
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
+}
+.artists section{
+  float:left;
+  width:20%;
+  margin: 50px 5% 30px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.artists section img{
+  width: 250px;
+  height: auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.artists section div{
+  background: rgb(31, 31, 31);
+  color: aliceblue;
+  height: auto;
+  width: 250px;
+  margin-top: -20px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media (max-width: 1650px){
+  .black{
+    height: 150px;
+    width: 300px;
+  }
+
+  .black *{
+    word-wrap: break-word;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  main > section{
+    width:40%;
+    margin: 0 40% 50px 10%;
+    color: aliceblue;
+  }
+}
+
+@media (max-width: 1400px){
+  header nav ul{
+    width:72%;
+    margin: 0 0 0 -30px;
+  }
+  
+  header nav li{
+    width:12.5%;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 1350px){
+  .two{
+    float: left;
+    width: 100%;
+  }
+
+  .two section{
+    float: none;
+    padding: 5% 5% 0;
+    text-align: center;
+    width: auto;
+    height: auto;
+  }
+
+  .two .twocat{
+    padding: 5%;
+  }
+  .two .twocat img{
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1000px){
+
+  body{
+    width: 100%;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+  }
+
+  body *{
+    margin:0;
+    padding:0;
+  }
+  
+  nav ul{
+    display:none;
+  }
+
+  nav img{
+    display: block;
+    margin:1% -4% 0 30%;
+    width: 30%;
+  }
+
+  nav a{
+    margin: 2% 0px 0px 6%;
+  }
+  
+  .black{
+    display: none;
+  }
+
+  main{
+    background: url(../assets/Main_Small.jpg);
+    background-size: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
+
+  main section{
+    padding: 0;
+    width: 82%;
+    margin:auto;
+  }
+
+  .three{
+    margin: 0;
+    padding: 0%;
+  }
+
+  .three section{
+    width: 33.3%;
+    padding: 20% 0 10% 0;
+  }
+
+  .two{
+    float: left;
+    width: 100%;
+  }
+  
+  .two section{
+    float: none;
+    padding: 5% 5% 0;
+    text-align: center;
+    width: auto;
+    height: auto;
+  }
+
+  .two .twocat{
+    padding: 5%;
+  }
+  .two .twocat img{
+    width: 100%;
+  }
+
+  .artists{
+    margin: auto;
+    width: 100%;
+  }
+
+  .artists section{
+    margin: 0 0 0 1%;
+    width: 32%;
+    padding: 3% 0 2% 0;
+  } 
+  .artists section img, .artists section div{
+    width: 100%;
+  }
+}
